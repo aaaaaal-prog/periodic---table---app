@@ -1,0 +1,5 @@
+{
+  "name": "Element Explorer",
+  "description": "An interactive educational mobile app that helps users learn about the periodic table in a fun and visual way, featuring detailed element information, a 3D atom visualizer, and a quiz mode.",
+  "requestFramePermissions": []
+}

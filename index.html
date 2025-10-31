@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              orbitron: ['Orbitron', 'sans-serif'],
+              rajdhani: ['Rajdhani', 'sans-serif'],
+            },
+            colors: {
+              'custom-blue': '#0d1b2a',
+              'custom-lightblue': '#1b263b',
+              'custom-midblue': '#415a77',
+              'custom-grey': '#778da9',
+              'custom-lightgrey': '#e0e1dd',
+              'glow-cyan': 'hsl(180, 100%, 50%)',
+              'glow-magenta': 'hsl(300, 100%, 50%)',
+            },
+            animation: {
+              'spin-slow': 'spin 10s linear infinite',
+              'spin-medium': 'spin 6s linear infinite',
+              'spin-fast': 'spin 3s linear infinite',
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'slide-in': 'slideIn 0.5s ease-in-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0 },
+                '100%': { opacity: 1 },
+              },
+              slideIn: {
+                '0%': { transform: 'translateY(100%)', opacity: 0 },
+                '100%': { transform: 'translateY(0)', opacity: 1 },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1b263b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #415a77;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #778da9;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
